@@ -1,1 +1,13 @@
-
+name: panda demo
+on:
+  push:
+    branches:
+      - main 
+jobs:
+  run-python-code:
+  runs-on: ubuntu-latest
+  steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+    - name: run program 
+      run: python data.py
