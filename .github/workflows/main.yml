@@ -9,5 +9,9 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v4
+        
+      - name: install required library
+        run: pip install panda
+        
       - name: run program 
         run: python data.py
